@@ -1,0 +1,74 @@
+/**
+* @author Richard Kuhnt (r15ch13)
+* @link https://github.com/r15ch13/bblog-preset-updater
+* @license MIT License (http://r15ch13.mit-license.org/)
+*/
+
+/**
+* Data, drive, floppy disk, save, storage icon
+* @author Stefania Servidio
+* @link https://www.iconfinder.com/icons/296911/data_drive_floppy_disk_save_storage_icon
+* @license Creative Commons (Attribution 3.0 Unported) (http://creativecommons.org/licenses/by/3.0/)
+*
+* Changes: Added inverted variation and converted to Base64
+*/
+.quick-update-preset .icon-floppy-disk {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAdVBMVEX///////8AAAD///8AAAD///8AAAAAAAAAAAD///////8AAAD///8AAAAAAAD///8AAAAAAAD///+QkJAAAAD///8AAAD///8AAAD///8AAAAAAAAAAAD///8AAAAAAAD///////////////////8AAAD///+RiMV1AAAAJ3RSTlNoKChqZCwsAGhkPDxAQGp8fB0dBU4hIXa1FRV2W0xrLlO8rlxbcHAw0HNXAAAAwklEQVQoz33QyRKCMBBF0dYACQ5JCIizOP//J5p0dckrRO7iLc6mq5r0SKRnilKOuO12n1BpruRV1+D2EQnx9gj1e4j3Z2ASVMS5GhCaQFVCJFhqqMcwkwJgvpJyxIWEuMmlDeCZpDMgNIFqiIqf7AhyKh377R8W1qS84Y7HQ0KruYzXNpU/RDSIu1NVv0Ywwhet4XwNCE3gJYOMYKahHqu5VAF2a6lDXEoFYFtILWBjpAYQmsDLEG3EufUG8raNONIH04YXzwPcXaIAAAAASUVORK5CYII=') no-repeat;
+
+    -webkit-transition: opacity 0.2s ease;
+    -webkit-transition-delay: 0s;
+    -moz-transition: opacity 0.2s ease 0s;
+    -o-transition: opacity 0.2s ease 0s;
+    transition: opacity 0.2s ease 0s;
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 7px 7px;
+}
+
+.quick-apply-preset {
+    width: 168px;
+    float: left;
+}
+
+.quick-update-preset {
+    height: 34px;
+    width: 34px;
+}
+
+#loadout .popover ul li .quick-update-preset {
+    padding: 0;
+}
+
+#popup-preset-updater {
+    padding-top: 7px;
+    color: #a8a8a8;
+}
+
+#popup-preset-updater a[data-bind-action="cancel"] {
+    margin-left: 18px;
+}
+
+#popup-preset-updater input {
+    line-height: 24px;
+    width: 510px;
+}
+
+#popup-preset-updater.error input {
+    border: 1px solid #af0000;
+}
+
+#popup-preset-updater .error-message {
+    display: none;
+    padding: 6px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c30000;
+}
+
+#popup-preset-updater.error .error-message {
+    display: block;
+    padding: 6px 0 0;
+}
+
