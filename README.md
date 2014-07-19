@@ -1,6 +1,6 @@
 BBLog Preset Updater
 ====================
-Allows updating and renaming a BF4 Weapon Preset without deleting it first.
+Allows updating and renaming of BF4 Weapon Presets without deleting them first.
 
 Usage
 -----
