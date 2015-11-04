@@ -1,11 +1,11 @@
 /**
-* BBLog Plugin        - tested with Version %VERSION_BBLOG%
-* Battlelog Extension - tested with Version %VERSION_BATTLELOG%
+* BBLog Plugin        - tested with Version 4.9.0
+* Battlelog Extension - tested with Version 231
 *
 * @author Richard Kuhnt (r15ch13)
 * @link https://github.com/r15ch13/bblog-preset-updater
 * @license MIT License (http://r15ch13.mit-license.org/)
-* @version %VERSION%
+* @version 1.2.0
 */
 
 // initialize your plugin
@@ -24,9 +24,9 @@ BBLog.handle('add.plugin', {
     * @type String
     */
     name: 'Preset Updater',
-    version: '%VERSION%',
-    css: "%CSS%",
-    debug: true,
+    version: '1.2.0',
+    css: ".quick-update-preset .icon-floppy-disk{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAdVBMVEX///////8AAAD///8AAAD///8AAAAAAAAAAAD///////8AAAD///8AAAAAAAD///8AAAAAAAD///+QkJAAAAD///8AAAD///8AAAD///8AAAAAAAAAAAD///8AAAAAAAD///////////////////8AAAD///+RiMV1AAAAJ3RSTlNoKChqZCwsAGhkPDxAQGp8fB0dBU4hIXa1FRV2W0xrLlO8rlxbcHAw0HNXAAAAwklEQVQoz33QyRKCMBBF0dYACQ5JCIizOP//J5p0dckrRO7iLc6mq5r0SKRnilKOuO12n1BpruRV1+D2EQnx9gj1e4j3Z2ASVMS5GhCaQFVCJFhqqMcwkwJgvpJyxIWEuMmlDeCZpDMgNIFqiIqf7AhyKh377R8W1qS84Y7HQ0KruYzXNpU/RDSIu1NVv0Ywwhet4XwNCE3gJYOMYKahHqu5VAF2a6lDXEoFYFtILWBjpAYQmsDLEG3EufUG8raNONIH04YXzwPcXaIAAAAASUVORK5CYII=) no-repeat;-webkit-transition:opacity .2s ease;-webkit-transition-delay:0s;-moz-transition:opacity .2s ease 0s;-o-transition:opacity .2s ease 0s;transition:opacity .2s ease 0s;content:'';width:20px;height:20px;display:block;margin:7px}.quick-apply-preset{width:168px;float:left}.quick-update-preset{height:34px;width:34px}#loadout .popover ul li .quick-update-preset{padding:0}#popup-preset-updater{height:auto;width:30%;margin-left:30%}#popup-preset-updater a[data-bind-action=cancel]{margin-left:18px}#popup-preset-updater input{line-height:24px;width:95%}#popup-preset-updater.error input{border:1px solid #af0000}#popup-preset-updater .error-message{display:none;padding:6px 0 0;font-size:12px;font-weight:700;color:#c30000}#popup-preset-updater.error .error-message{display:block;padding:6px 0 0}",
+    debug: false,
 
     /**
     * Some translations for this plugins

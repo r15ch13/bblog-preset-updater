@@ -4,8 +4,8 @@ Allows updating and renaming of BF4 Weapon Presets without deleting them first.
 
 Usage
 -----
- * Add ```https://bblog-preset-updater.s3-eu-west-1.amazonaws.com/v1.0.0/bblog-preset-updater.js``` to BBLog Plugins.
- * Add ```https://bblog-preset-updater.s3-eu-west-1.amazonaws.com/v1.0.0/bblog-preset-updater.css``` to BBLog Theme Switcher.
+ * Add ```https://bblog-preset-updater.s3-eu-west-1.amazonaws.com/v1.2.0/bblog-preset-updater.js``` to BBLog Plugins.
+ * Add ```https://bblog-preset-updater.s3-eu-west-1.amazonaws.com/v1.2.0/bblog-preset-updater.css``` to BBLog Theme Switcher.
  * Reload page.
  * Go to __Loadout__ and open the presets dropdown
 

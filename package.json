@@ -1,0 +1,27 @@
+{
+  "name": "bblog-preset-updater",
+  "author": "Richard Kuhnt (r15ch13)",
+  "version": "1.2.0",
+  "license": "MIT",
+  "versionBblog": "4.9.0",
+  "versionBattlelog": "231",
+  "private": true,
+  "homepage": "https://github.com/r15ch13/bblog-preset-updater#readme",
+  "description": "Allows updating and renaming of BF4 Weapon Presets without deleting them first.",
+  "main": "bblog-preset-updater.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.10.0",
+    "grunt-sed": "^0.1.1",
+    "uglify-save-license": "^0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://r15ch13@github.com/r15ch13/bblog-preset-updater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r15ch13/bblog-preset-updater/issues"
+  }
+}
