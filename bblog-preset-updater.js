@@ -26,6 +26,7 @@ BBLog.handle('add.plugin', {
     name: 'Preset Updater',
     version: '1.0.2',
     css: '',
+    debug: false,
 
     /**
     * Some translations for this plugins
@@ -89,6 +90,8 @@ BBLog.handle('add.plugin', {
     {
         if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
 
+        if(instance.debug) console.log(this.name + ' v' + this.version + ' loaded (init)');
+
         instance.model = window.BL.backbone.model_instances.loadoutModel;
 
         instance.addPresetUpdateButtons(instance);
@@ -143,6 +146,8 @@ BBLog.handle('add.plugin', {
     domchange: function(instance)
     {
         if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
+
+        if(instance.debug) console.log(this.name + ' v' + this.version + ' loaded (domchange)');
 
         instance.addPresetUpdateButtons();
 
