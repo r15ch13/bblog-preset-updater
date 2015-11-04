@@ -70,7 +70,7 @@ BBLog.handle('add.plugin', {
     */
     configFlags:
     [
-        {'key': 'option.enabled', 'init': 1},
+        ['option.enabled', 1],
     ],
 
 
@@ -88,7 +88,7 @@ BBLog.handle('add.plugin', {
     */
     init: function(instance)
     {
-        if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
+        if( BBLog.cache("mode") != "bf4" || ! $('#loadout-flipper').length || ! instance.storage('option.enabled') ) return;
 
         instance.log('loaded (init)');
 
@@ -147,7 +147,7 @@ BBLog.handle('add.plugin', {
     */
     domchange: function(instance)
     {
-        if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
+        if( BBLog.cache("mode") != "bf4" || ! $('#loadout-flipper').length || ! instance.storage('option.enabled') ) return;
 
         instance.log('loaded (domchange)');
 
