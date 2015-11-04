@@ -24,9 +24,9 @@ BBLog.handle('add.plugin', {
     * @type String
     */
     name: 'Preset Updater',
-    version: '1.0.2',
-    css: '',
-    debug: false,
+    version: '#version#',
+    css: "#css#",
+    debug: true,
 
     /**
     * Some translations for this plugins
