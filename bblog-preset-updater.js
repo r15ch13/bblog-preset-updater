@@ -1,11 +1,11 @@
 /**
-* BBLog Plugin        - tested with Version 4.3.1
-* Battlelog Extension - tested with Version 126
+* BBLog Plugin        - tested with Version 4.9.0
+* Battlelog Extension - tested with Version 231
 *
 * @author Richard Kuhnt (r15ch13)
 * @link https://github.com/r15ch13/bblog-preset-updater
 * @license MIT License (http://r15ch13.mit-license.org/)
-* @version 1.0.0
+* @version 1.0.2
 */
 
 // initialize your plugin
@@ -24,6 +24,8 @@ BBLog.handle('add.plugin', {
     * @type String
     */
     name: 'Preset Updater',
+    version: '1.0.2',
+    css: '',
 
     /**
     * Some translations for this plugins
@@ -85,12 +87,23 @@ BBLog.handle('add.plugin', {
     */
     init: function(instance)
     {
+        if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
 
         instance.model = window.BL.backbone.model_instances.loadoutModel;
 
         instance.addPresetUpdateButtons(instance);
 
-        $('#content').on('click', '#loadout-overview .quick-update-preset', function(event) {
+        if(instance.css)
+        {
+            var style = $('<style></style>');
+            style.html(instance.css);
+            $('head').append(style);
+        }
+        else
+        {
+            var css = document.currentScript.src.substr(0, document.currentScript.src.length - 2) + 'css';
+            $('head').append($('<link rel="stylesheet" href="' + css + '" />'));
+        }
 
         $('#content').on('click', '#loadout-overview .quick-update-preset', function(event)
         {
@@ -129,6 +142,7 @@ BBLog.handle('add.plugin', {
     */
     domchange: function(instance)
     {
+        if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
 
         instance.addPresetUpdateButtons();
 
@@ -180,6 +194,10 @@ BBLog.handle('add.plugin', {
                                + instance.t('button.cancel') + '</a></div>';
 
             BBLog.popup(instance.id, instance.t('confirm.title'), confirmText, confirmButtons);
+
+            // Workaround for strange bblog popup resizing stuff ...
+            $(window).off("resize.bblog-popup");
+            $('#popup-' + instance.id + ' .dialog-body').height('auto');
         }
     },
 
