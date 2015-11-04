@@ -90,7 +90,7 @@ BBLog.handle('add.plugin', {
     {
         if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
 
-        if(instance.debug) console.log(this.name + ' v' + this.version + ' loaded (init)');
+        instance.log('loaded (init)');
 
         instance.model = window.BL.backbone.model_instances.loadoutModel;
 
@@ -98,12 +98,14 @@ BBLog.handle('add.plugin', {
 
         if(instance.css)
         {
-            var style = $('<style></style>');
+            instance.log('embedded style-tag to header');
+            var style = $('<style type="text/css"></style>');
             style.html(instance.css);
             $('head').append(style);
         }
         else
         {
+            instance.log('embedded external stylesheet to header');
             var css = document.currentScript.src.substr(0, document.currentScript.src.length - 2) + 'css';
             $('head').append($('<link rel="stylesheet" href="' + css + '" />'));
         }
@@ -147,7 +149,7 @@ BBLog.handle('add.plugin', {
     {
         if( ! $('#loadout-flipper').length || ! instance.storage('option.enabled')) return;
 
-        if(instance.debug) console.log(this.name + ' v' + this.version + ' loaded (domchange)');
+        instance.log('loaded (domchange)');
 
         instance.addPresetUpdateButtons();
 
@@ -279,5 +281,16 @@ BBLog.handle('add.plugin', {
 
         BBLog.closeAllPopups();
     },
+
+    log: function()
+    {
+        var instance = this;
+
+        if(instance.debug)
+        {
+            var args = Array.prototype.slice.call(arguments);
+            window.console.log(instance.name + ' (v' + instance.version + '): ' + args.join(', '));
+        }
+    }
 
 });
